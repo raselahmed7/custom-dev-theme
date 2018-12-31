@@ -11,8 +11,7 @@
 
 
     jQuery(window).load(function(){
-
-        
+        jQuery(".header-area").sticky();
     });
 
 }(jQuery));	
