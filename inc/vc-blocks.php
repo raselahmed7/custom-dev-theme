@@ -37,11 +37,13 @@ vc_map(
                 "type" => "textfield",
                 "heading" => esc_html__( "Button text", "inventor-toolkit" ),
                 "param_name" => "text",
+                "admin_label" => true,
             ),
             array(
                 "type" => "textfield",
                 "heading" => esc_html__( "Button link", "inventor-toolkit" ),
                 "param_name" => "link",
+                "admin_label" => true,
             ),
             array(
                 "type" => "dropdown",

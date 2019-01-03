@@ -42,3 +42,8 @@ body {
 .single-post-item h2 {
     font-size: 25px;
 }
+
+.sticky-wrapper {
+    position: relative;
+    z-index: 9;
+}
