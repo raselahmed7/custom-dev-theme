@@ -83,12 +83,12 @@ if( class_exists( 'CSF' ) ) {
     ) );
 
 } else {
-    function sample_admin_notice__success() {
+    function ppm_quickstart_codestar_install_notice() {
         ?>
         <div class="notice notice-warning">
             <p><strong><?php echo wp_get_theme(); ?></strong> required <strong>Codestar Framework</strong> plugin to be installed and activated on your site.</p>
         </div>
         <?php
     }
-    add_action( 'admin_notices', 'sample_admin_notice__success' );
+    add_action( 'admin_notices', 'ppm_quickstart_codestar_install_notice' );
 }
