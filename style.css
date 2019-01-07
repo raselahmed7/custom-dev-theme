@@ -47,3 +47,5 @@ body {
     position: relative;
     z-index: 9;
 }
+
+.content-block, .enable-default-padding {padding: 60px 0}

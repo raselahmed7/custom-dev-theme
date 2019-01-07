@@ -17,8 +17,8 @@ function post_list_shortcode($atts){
     $html = '<div class="custom-post-list">';
     while($q->have_posts()) : $q->the_post();
         $idd = get_the_ID();
-        if(get_post_meta($idd, 'custom_field', true)) {
-            $meta = get_post_meta($idd, 'custom_field', true);
+        if(get_post_meta($idd, 'ppm_page_meta', true)) {
+            $meta = get_post_meta($idd, 'ppm_page_meta', true);
         } else {
             $meta = array();
         }
@@ -56,9 +56,38 @@ function btn_shortcode( $atts, $content = null  ) {
 }   
 add_shortcode('btn', 'btn_shortcode');
 
+function phone_btn_shortcode( $atts, $content = null  ) {
+    $options = get_option('ppm_theme_options');
+    $phone = $options['phone'];
+
+    if(!empty($phone)) {
+        $html = '<a href="tel:'.$phone.'" class="boxed-btn phone-btn">'.$phone.'</a>';
+    } else {
+        $html = '';
+    }
+ 
+    return $html;
+}   
+add_shortcode('phone_btn', 'phone_btn_shortcode');
+
+function phone_text_btn_shortcode( $atts, $content = null  ) {
+    $options = get_option('ppm_theme_options');
+    $phone = $options['phone'];
+
+    if(!empty($phone)) {
+        $html = '<a href="tel:'.$phone.'" class="phone-text-btn">'.$phone.'</a>';
+    } else {
+        $html = '';
+    }
+ 
+    return $html;
+}   
+add_shortcode('phone_text_btn', 'phone_text_btn_shortcode');
+
 function socials_shortcode( $atts, $content = null  ) {
  
-    $socials_markup = cs_get_option('socials');
+    $options = get_option('ppm_theme_options');
+    $socials_markup = $options['socials'];
     
     if(!empty($socials_markup)) {
         $social_icons_markup = '<div class="social-links">';

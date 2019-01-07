@@ -25,7 +25,7 @@ class ppmVCExtendAddonClass {
         $theme_data = wp_get_theme();
         echo '
         <div class="notice notice-warning">
-          <p>'.sprintf(__('<strong>%s</strong> recommends <strong>Visual Composer</strong> plugin to be installed and activated on your site.', 'ppm-toolkit'), $theme_data->get('Name')).'</p>
+          <p>'.sprintf(__('<strong>%s</strong> required <strong>Visual Composer</strong> plugin to be installed and activated on your site.', 'ppm-toolkit'), $theme_data->get('Name')).'</p>
         </div>';
     }
 }

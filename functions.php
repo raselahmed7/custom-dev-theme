@@ -43,5 +43,4 @@ include_once('inc/widgets.php');
 include_once('inc/shortcodes.php');
 include_once('inc/custom-posts.php');
 include_once('inc/vc-blocks-load.php');
-include_once('inc/codestar-framework/cs-framework.php');
-include_once('inc/theme-options-and-metabox.php');
+include_once('inc/metabox-and-options.php');
